@@ -29,7 +29,6 @@ with tab1:
 
 with tab2:
 st.subheader("What-If Simulator")
-    
     # 1. This creates the input box
     rev = st.number_input("Enter Monthly Revenue:", value=2000)
     
