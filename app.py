@@ -48,7 +48,6 @@ with tab2:
         st.error("Warning: High Risk of Loss! ⚠️")
 
   st.subheader("🤖 AI Growth Advice")
-    
     if live_profit > 1500:
         st.info("💡 **Strategy:** Your profit is strong! Consider scaling your marketing.")
     elif 0 < live_profit <= 1500:
