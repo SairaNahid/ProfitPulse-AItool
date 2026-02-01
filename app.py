@@ -46,6 +46,7 @@ with tab2:
         st.success("You are in the Green! ✅")
     else:
         st.error("Warning: High Risk of Loss! ⚠️")
+with tab2 :
 st.subheader("Saira Growth Advice")
     if live_profit > 1500:
         st.info("💡 **Strategy:** Your profit is strong! This is the perfect time to launch a new 'Product' line to increase your brand value.")
