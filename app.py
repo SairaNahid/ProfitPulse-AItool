@@ -3,8 +3,9 @@ import streamlit as stimport numpy as npfrom sklearn.linear_model import LinearR
 # --- . THE APP INTERFACE ---
 st.title(" Bakery Growth & ProfitPulse")
 
-tab1, tab2 = st.tabs([" Expense Forecast", " Profit Simulator"])
-with tab1:    st.subheader("Predict Next Month's Bills")  
+tab1, tab2 ,tab3 = st.tabs([" Expense Forecast", " Profit Simulator", Math Solver])
+with tab1:   
+  st.subheader("Predict Next Month's Bills")  
   data = st.text_input("Past 6 months expenses (comma separated):", "500, 550, 600, 580, 620, 650")   
 is_fest = st.toggle("Is next month a Festival?")       
 if data:       
@@ -14,13 +15,15 @@ if data:       
   pred = model.predict([[len(y)]])[0][0]        
   if is_fest: pred *= 1.3        
     st.metric("Predicted Bill", f"${pred:,.2f}")
-with tab2:    st.subheader("What-If Simulator")    
+with tab2:   
+  st.subheader("What-If Simulator")    
   rev = st.number_input("Monthly Revenue", value=2000)   
 inf = st.slider("Simulate Inflation (%)", 0, 30, 5)   
 st.metric("Adjusted Profit", f"${rev - (pred * (1 + inf/100)):,.2f}")
 
 
-# --- TAB 3: STUDENT & TUTOR CORNER ---with tab3:   
+# --- TAB 3: STUDENT & TUTOR CORNER ---
+with tab3:   
 st.header(" Interactive Math Solver")   
 st.write("Helping students visualize Calculus & Algebra through code.")       
 math_topic = st.selectbox("Choose a Topic to Visualize:", ["Linear Equations", "Quadratic Curves", "Calculus: Derivatives"])
