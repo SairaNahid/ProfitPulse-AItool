@@ -31,7 +31,7 @@ with tab2:
     st.subheader("What-If Simulator")
     
     # 1. This creates the input box
-    rev = st.number_input("Enter your sales goal:", value=2000)
+    rev = st.number_input("Enter Monthly Revenue :", value=2000)
     
     # 2. This does the live calculation
     # (If Tab 1 hasn't run yet, we use a default of 1200)
@@ -42,7 +42,7 @@ with tab2:
     st.header(f"Calculated Profit: ${live_profit:,.2f}")
     
     if live_profit > 0:
-        st.success("You are in the Green! ✅")
+        st.success("Business is Profitable! ✅")
     else:
         st.error("Warning: High Risk of Loss! ⚠️")
 
