@@ -28,38 +28,25 @@ with tab1:
         st.metric("Predicted Next Bill", f"${pred:,.2f}")
 
 with tab2:
-st.header("📊 Profit Analyzer")
-    st.write("Check your business health by testing different sales targets.")
-
-    # 1. THE INPUT (The 'Enter Monthly Revenue' box)
-    rev = st.number_input("Enter Monthly Sales Goal ($):", value=2000)
-
-    # 2. THE MATH (Predicting Profit)
-    # This uses 'pred' from Tab 1. If Tab 1 hasn't run, it uses a default.
-    current_expenses = pred if 'pred' in locals() else 677.33
+st.subheader("What-If Simulator")
+    
+    # 1. This creates the input box
+    rev = st.number_input("Enter Monthly Revenue:", value=2000)
+    
+    # 2. This does the live calculation
+    # (If Tab 1 hasn't run yet, we use a default of 1200)
+    current_expenses = pred if 'pred' in locals() else 1200
     live_profit = rev - current_expenses
-
-    # 3. THE RESULT DISPLAY
-    st.subheader(f"Projected Net Profit: ${live_profit:,.2f}")
-
+    
+    # 3. This shows the result instantly
+    st.header(f"Calculated Profit: ${live_profit:,.2f}")
+    
     if live_profit > 0:
-        st.success("Target Achieved: Your Business is Profitable! ✅")
+        st.success("Target Achieved:Business is Profitable! ✅")
     else:
-        st.error("Threshold Not Met: High Risk of Loss! ⚠️")
+        st.error("Warning: High Risk of Loss! ⚠️")
 
-    # 4. THE GROWTH ADVICE (Paste this at the very bottom of Tab 2)
-    st.divider()
-    st.subheader(" Business Strategy")
-    
-    if live_profit > 1500:
-        st.info("💡 **Strategy:** Your profit is strong! Consider scaling your marketing.")
-    elif 0 < live_profit <= 1500:
-        st.warning("💡 **Strategy:** Profit is thin. Look for ways to optimize costs.")
-    else:
-        st.error("💡 **Strategy:** Critical! You must increase prices or cut overhead.")
-
-    
-
+  
 
 
 
