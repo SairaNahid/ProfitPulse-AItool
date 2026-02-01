@@ -15,7 +15,7 @@ with st.sidebar:
 
 st.title(" ProfitPulse: Business Growth AI")
 
-tab1, tab2, tab3 = st.tabs(["📈 Expense Forecast", "💰 Profit Simulator", "📐 Math Solver"])
+tab1, tab2  = st.tabs(["📈 Expense Forecast", "💰 Profit Simulator"])
 
 with tab1:
     st.subheader("Predict Next Month's Bills")
@@ -48,9 +48,6 @@ with tab2:
         st.error("Warning: High Risk of Loss! ⚠️")
 
 
-with tab3:
-    st.subheader("Student Corner: Math Visualizer")
-    m = st.slider("Slope (m)", -10.0, 10.0, 2.0)
-    st.write(f"Visualizing the equation: y = {m}x")
+
 
 
