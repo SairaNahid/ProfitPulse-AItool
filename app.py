@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
 
-st.set_page_config(page_title="ProfitPulse AI", page_icon="📈")
+st.set_page_config(page_title="ProfitPulse", page_icon="📈")
 with st.sidebar:
     st.title("Saira Nahid")
     st.write("🎓 **M.Tech (Computer Science)**")
@@ -13,8 +13,8 @@ with st.sidebar:
     st.write("- Math & CS Tutoring")
     st.write("- Data Analysis Consulting")
 
-st.title(" ProfitPulse: Business Growth AI")
-
+st.title(" ProfitPulse: Business Growth by Saira")
+ 
 tab1, tab2  = st.tabs(["📈 Expense Forecast", "💰 Profit Simulator"])
 
 with tab1:
