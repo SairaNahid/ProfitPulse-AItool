@@ -1,4 +1,8 @@
-import streamlit as stimport numpy as npfrom sklearn.linear_model import LinearRegression
+import streamlit as st
+import numpy as np
+from sklearn.linear_model 
+import LinearRegression
+import matplotlib.pyplot as plt
 
 # --- . THE APP INTERFACE ---
 st.title(" Bakery Growth & ProfitPulse")
