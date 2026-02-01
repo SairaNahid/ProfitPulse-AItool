@@ -46,6 +46,16 @@ with tab2:
         st.success("You are in the Green! ✅")
     else:
         st.error("Warning: High Risk of Loss! ⚠️")
+st.subheader("Saira Growth Advice")
+    
+    if live_profit > 1500:
+        st.info("💡 **Strategy:** Your profit is strong! This is the perfect time to launch a new 'Product' line to increase your brand value.")
+    elif 0 < live_profit <= 1500:
+        st.warning("💡 **Strategy:** You are making money, but it's tight. Try a 'Combo Deal' (Buy 5 , get 1 free) to move more inventory faster.")
+    else:
+        st.error("💡 **Strategy:** High Risk! Check your electricity usage or find a cheaper supplier immediately to stop the loss.")
+
+
 
 
 
