@@ -15,7 +15,7 @@ with st.sidebar:
 
 st.title(" ProfitPulse: Business Growth by Saira")
  
-tab1, tab2  = st.tabs(["📈 Expense Forecast", "💰 Profit Simulator"])
+tab1, tab2  = st.tabs(["📈 Expense Predictor", "💰 Profit Analyzer"])
 
 with tab1:
     st.subheader("Predict Next Month's Bills")
