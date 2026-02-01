@@ -20,9 +20,25 @@ with tab1:
         st.metric("Predicted Next Bill", f"${pred:,.2f}")
 
 with tab2:
+
     st.subheader("What-If Simulator")
-    rev = st.number_input("Monthly Revenue", value=2000)
-    st.write("Adjust your revenue and costs to see potential profit.")
+    
+    # 1. This creates the input box
+    rev = st.number_input("Enter your sales goal:", value=2000)
+    
+    # 2. This does the live calculation
+    # (If Tab 1 hasn't run yet, we use a default of 1200)
+    current_expenses = pred if 'pred' in locals() else 1200
+    live_profit = rev - current_expenses
+    
+    # 3. This shows the result instantly
+    st.header(f"Calculated Profit: ${live_profit:,.2f}")
+    
+    if live_profit > 0:
+        st.success("You are in the Green! ✅")
+    else:
+        st.error("Warning: High Risk of Loss! ⚠️")
+
 
 with tab3:
     st.subheader("Student Corner: Math Visualizer")
